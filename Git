@@ -1,4 +1,4 @@
 GIT NOTES
--> Dont  make commits in detached head changes done will be lost
+-> Dont  make commits in detached head changes done to files will be lost
    eg: git checkout <sha 1 code of previous commit> 
    
