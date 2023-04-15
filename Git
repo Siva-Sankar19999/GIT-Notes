@@ -1,4 +1,15 @@
-GIT NOTES
--> Dont  make commits in detached head changes done to files will be lost
-   eg: git checkout <sha 1 code of previous commit> 
-   
+->Git Uder the hood
+
+GIT OBJECT TYPES:
+  ->Git has four types of objects 1. Blob 2.Tree 3.commit 4.Annotated Tag
+    ->Blob :with the help of Blob object type, git store files of any type in blobs
+    ->Tree :with the help of Tree object type, git stores information about directories 
+    ->commit :with the help of commit object type,git stores different versions of project
+    ->Annotated tag:It contains persistent pointer that points to commit
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GIT LOW LEVEL COMMANDS
+
+->git hash-object : with the help of this command we can create new blob objects and write to it
+->git cat-file : with the help of this command we can read git object
+->git mktree : with the help of this command we can create new tree object
+    
