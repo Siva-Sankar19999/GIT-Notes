@@ -58,6 +58,8 @@ GIT TREE OBJECT
   git read-tree <hash>    eg: hash code tree object
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ->Bring files from working directoty to staging area
+  git checkout-index -a (a for all files in staging area to working directory)
+
 
 
 
