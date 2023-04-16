@@ -1,15 +1,76 @@
-->Git Uder the hood
+->Git Uder the hood          https://stashchuk.com/static/git/4-how-git-works-under-the-hood.pdf
 
 GIT OBJECT TYPES:
   ->Git has four types of objects 1. Blob 2.Tree 3.commit 4.Annotated Tag
-    ->Blob :with the help of Blob object type, git store files of any type in blobs
-    ->Tree :with the help of Tree object type, git stores information about directories 
+    ->Blob :with the help of Blob object type, git store(manage) files of any type in blobs
+    ->Tree :with the help of Tree object type, git stores(manage) information about directories 
     ->commit :with the help of commit object type,git stores different versions of project
     ->Annotated tag:It contains persistent pointer that points to commit
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 GIT LOW LEVEL COMMANDS
 
-->git hash-object : with the help of this command we can create new blob objects and write to it
+->git hash-object : with the help of this command we can create new blob objects and write to it(using -w)
 ->git cat-file : with the help of this command we can read git object
 ->git mktree : with the help of this command we can create new tree object
-    
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->Git cat file options
+
+git cat-file -p <hash>  ---contents of the object
+git cat-file -s <hash>  ---size of the object
+git cat-file -t <hash>  ---type of the object
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create file object using git hash-object
+
+->git hash-object <filename> -w
+* NOT REQUIRED BELOW
+->Where git object store its file type and size information?
+  It stores in git object itself.
+  git blob object structure : type sizeDelimiter content of file <---> blob 26(Bytes)\0 'some random text' 
+             eg: echo -e 'blob 26\0some random text' | shasum gives same sha1 hash code where we can produce using this way of creating
+                  file objects  eg: git hash-object <file name> -w 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUMMARY ABOUT GIT BLOB AND GIT TREE
+
+->Git blob doesnot store file names.
+->Git Tree contains file name thats why we dont need to store names in git blobs.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GIT TREE OBJECT
+
+->How can we create a tree object?
+  First create a temporary file that contain previous blobs information 
+     temp.txt
+             100644 blob <hash code> filename
+             100644 blob <hash code> filename2
+     gave this temp.txt to git tree object like below
+             
+           * cat temp.txt | git mktree
+           
+           Now above tree object contains pointers to already existing blob objects(files) and we have to given nam to them also. 
+     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->List files in staging area
+  git ls-files -s
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->Bring files from .git to staging area
+  git read-tree <hash>    eg: hash code tree object
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->Bring files from working directoty to staging area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
