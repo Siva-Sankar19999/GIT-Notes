@@ -48,7 +48,7 @@ GIT TREE OBJECT
              
            * cat temp.txt | git mktree
            
-           Now above tree object contains pointers to already existing blob objects(files) and we have to given nam to them also. 
+           Now above tree object contains pointers to already existing blob objects(files) and we have to given name to them also. 
      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ->List files in staging area
@@ -59,7 +59,21 @@ GIT TREE OBJECT
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ->Bring files from working directoty to staging area
   git checkout-index -a (a for all files in staging area to working directory)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+->GIT BASICS (NEXT SECTION)
+  ->To see the configurations of git
+    git config --list
+  ->Every file in git will be in four stages 
+    1.Untracked 2.Modified 3.Unmodified 4.Staged
+    There is no tracked state.But we can say file is tracked by git if it is in modified,staged or unmodified.
+    When we add(create) new files to working directory it will be in untracked state.
+* ->What to do when we add a file that is not required or incorrect?
+    We have to make the file untracked. 
+    
+  
+    
+    
 
 
 
