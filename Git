@@ -57,7 +57,7 @@ GIT TREE OBJECT
 ->Bring files from .git to staging area
   git read-tree <hash>    eg: hash code tree object
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-->Bring files from working directoty to staging area
+->Bring files from staging area to working directory
   git checkout-index -a (a for all files in staging area to working directory)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,7 +69,16 @@ GIT TREE OBJECT
     There is no tracked state.But we can say file is tracked by git if it is in modified,staged or unmodified.
     When we add(create) new files to working directory it will be in untracked state.
 * ->What to do when we add a file that is not required or incorrect?
-    We have to make the file untracked. 
+    We have to make the file untracked.
+* If we make any modifications in unmodified file it will again come into modified state -> then we have to make the file to staged state and after change to
+  unmodified state
+->Git status command tells the file in which state and it is most used command.
+      
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->Git add command : We can make the file untracked state to staged state and modified state to staged state.
+->Git commit : we can make the file staged state to unmodified state.
+->git rm --cached fileName : We can make file from staged state to untracked state directly.
+
     
   
     
