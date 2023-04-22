@@ -75,10 +75,38 @@ GIT TREE OBJECT
 ->Git status command tells the file in which state and it is most used command.
       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ->Git add command : We can make the file untracked state to staged state and modified state to staged state.
 ->Git commit : we can make the file staged state to unmodified state.
 ->git rm --cached fileName : We can make file from staged state to untracked state directly.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->GIT BRANCHES
+  ->Branch is like a reference(pointer) to last commit 
+  Q)How can git identify what is the current branch?
+  a) Head is a pointer that points to current branch
+  ->There is a file named HEAD in .git folder it contains information of current branch that head points to.
+  ->Actually head pointer to current branch and that branch points to last commit.
+  ->If we make the head points to some commit(sha1 hash code) instead of branch . we will be in Detached head state.
+  Q)what is Detached head state?
+  a) ??????
+  
+  ->BRANCH COMMANDS
+    ->git branch ->Lists all the branches
+    ->git branch <branch-name>  ->Create a branch
+    ->git checkout <branch-name> ->Checkout to different branch
+    ->git branch -d <branch-name> ->Delete a branch that is merged
+    ->git branch -D <branch-name>  ->Delete a branch that is non-merged
+    ->git branch -m <old-name> <new-name> ->Renaming a branch
+    ->git checkout -b <branch-name>  ->create a branch and checkout to that branch
+    
+  ->.git/refs/heads contains all the branches(pointers).
+  ->.git/Head contains the information about the current branch.
+    
+    
+  
+  
+  
     
   
     
