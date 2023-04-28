@@ -102,6 +102,9 @@ GIT TREE OBJECT
     
   ->.git/refs/heads contains all the branches(pointers).
   ->.git/Head contains the information about the current branch.
+  
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     
     
   
