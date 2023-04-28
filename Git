@@ -104,7 +104,9 @@ GIT TREE OBJECT
   ->.git/Head contains the information about the current branch.
   
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+->GIT DIFF
+  It is not convinent to use git diff to see changes in the file. and we can use vs code editor for same purpose(diff) and we can see changes after the changes have 
+  commited. 
     
     
   
