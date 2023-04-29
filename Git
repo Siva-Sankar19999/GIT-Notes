@@ -107,6 +107,16 @@ GIT TREE OBJECT
 ->GIT DIFF
   It is not convinent to use git diff to see changes in the file. and we can use vs code editor for same purpose(diff) and we can see changes after the changes have 
   commited. 
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ->GIT MERGING
+   Merging is of two types 1.Fast forward merge
+                           2.3 way merge
+                           
+  ->Fast forward Merge : This will happen when there is no further commits in receiving branch after we created a new branch
+    git checkout master
+    git merge <new-branch>
+    
     
     
   
