@@ -142,6 +142,9 @@ GIT TREE OBJECT
   
   ->git remote show origin : It shows connection between remote repository and local repository and it is some what important.
   
+  ->Git fetch:
+    one advantage is: It fetch the remote branches into local branches 
+  
   
   
                                                        
