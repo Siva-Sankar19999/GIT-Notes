@@ -123,6 +123,29 @@ GIT TREE OBJECT
   ->In 3 way merge there is a chance of merge conflicts when we edit same file in same line as other developer.
   
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ->GIT PUSH,FETCH,PULL
+  
+  ->GIT PULL : Git pull is 2 step process  1.It will fetch the changes from remote branch 
+                                           2.After fetching it merge the remote branch with local branch and if there is conflicts it will be solved by
+                                             fast forward merge or 3 way merge.
+  ->git remote : It will list the remote servers(If it has remote git repository connected) and default name is origin 
+  ->git branch command  will list only the locally created branches and will not list remote branches except master/main branch.
+  ->git branch -a will list both local and remote branches.
+  ->git branch -r will list only the remote branches but we need to do git fetch first becoz it will fetch all the remote branches into local git repository into .git/refs/heads folder
+  ->After cloning of any remote repository git will create only one local branch with the same name as default branch in remote branch
+  
+  ->Tracking branch : Tracking is your local branch in your local repository that is connected to specific remote branch (we can have many tracking branches)
+  ->How can we verify which are tracking branch and which are not ? 
+  a)git branch -vv
+  
+  summary about tracking brnach: Branch that is connected to specific remote branch
+  
+  ->git remote show origin : It shows connection between remote repository and local repository and it is some what important.
+  
+  
+  
+                                                       
+    
     
     
     
