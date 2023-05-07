@@ -145,6 +145,34 @@ GIT TREE OBJECT
   ->Git fetch:
     one advantage is: It fetch the remote branches into local branches 
   
+  ->How to create a remote branch based on local branch?
+  a) git push -u origin <branch-name>
+  
+  ->Update tracking statuses of the branches
+   scenario is : we create a branch at remote and checkout to branch locally then tracking branch will be created and some one deleted that branch remotely and 
+                 locally tracking branch will still point to that deleted remote branch (even after git fetch)
+                 
+                 Q) what to do then ?
+                   we have to use git remote update origin --prune
+          
+  ->combo commands to use before git pull : 1.git branch -vv [check tracking branch is there or not]
+                                            2.git remote update origin --prune 
+                                            
+* ->combo commands to use for listing remote branches : 1. git fetch (It is good to use this command before git branch -a)
+                                                        2. git branch -r or git branch -a   
+                                                        
+  ->command to delete remote branch from local machine
+  a) git push origin -d <branch-name>
+  
+  ->How can we find local branch and remote branch pointing to same commit and up to date
+  a)git show-ref <branch-name>
+  
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  
+                                            
+                   
+  
   
   
                                                        
