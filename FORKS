@@ -1,0 +1,23 @@
+How to sync forked repository with changes in the parent repository?
+How to open pull request in the parent repository from forked repository?
+
+->Fork
+  Forking is just like copying a repository from other user and it is a github feature and git doesnot track or doesnot know anything about it.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->How to sync forked repository with changes in the parent repository
+  1.First we need to add another server to our local repository
+      ->How to add another server to our forked repository?
+        git remote add <upstream> <URL of original repo>
+  2.Pull changes from parent repository to local forked repository
+      ->git pull upstream <branch>
+  3. git push to remote forked repository
+  
+  This way we can maintain sync changes with parent repository <-> forked repository
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+->How to open pull request in the parent repository from forked repository?  
+  simple and can be done using github  
+  
+  
+    
+    
+  
