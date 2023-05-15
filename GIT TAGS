@@ -1,4 +1,6 @@
 GIT TAG
+For more information on git tags https://www.freecodecamp.org/news/git-tag-explained-how-to-add-remove/
+
 ->Git tag
   Tag is like a static pointer to specific commit
   Branch is a dynamic pointer becoz branch moves along with commits 
@@ -13,6 +15,16 @@ GIT TAG
   These are stored in .git/refs/tags and .git/objects
   It stores tag message
   Stores tag author and date
+  
+Q)To see specific git tag information in local?
+  git tag -v <tag name>
+  
+Q)How to push locally created git tags to remote?
+  git push --tags : both commits and locally created git tags are pushed to remote
+Q)To push only tags not commits?
+  git push origin <tagname>
+  
+  
   
   
   
