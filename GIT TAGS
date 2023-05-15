@@ -1,1 +1,18 @@
-
+GIT TAG
+->Git tag
+  Tag is like a static pointer to specific commit
+  Branch is a dynamic pointer becoz branch moves along with commits 
+->Git tag is of two types
+  1.light weight tags  
+  2.Annotated tags
+->Light weight tags
+  These are creating using a command called : git tag v2.0.0
+  These are stored in .git/refs/tags like branches as they are stored in .git/refs/remotes
+->Annotated tags
+  These are creating using a command called : git tag -a v2.0.0 -m <Any message>
+  These are stored in .git/refs/tags and .git/objects
+  It stores tag message
+  Stores tag author and date
+  
+  
+  
